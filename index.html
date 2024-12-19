@@ -1,12 +1,172 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mığçıoğlu Ocakbaşı</title>
+    <title>Mığcıoğlu Ocakbaşı</title>
+    <style>
+        /* Genel Stiller */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f3ec; /* Hafif krem rengi arka plan */
+            scroll-behavior: smooth;
+        }
+
+        /* Dekoratif Arka Plan */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('fork-and-knife.svg'), url('plate.svg'); /* SVG dekorlar */
+            background-repeat: no-repeat;
+            background-size: 100px, 150px;
+            background-position: left top, right bottom; /* Çizimleri köşelere yerleştir */
+            opacity: 0.1; /* Şeffaflık */
+            z-index: -1;
+        }
+
+        header {
+            background: #c62828;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            background: #e53935;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #b71c1c;
+            transform: scale(1.1);
+        }
+
+        /* Bölüm Stilleri */
+        section {
+            padding: 50px 20px;
+            text-align: center;
+            min-height: 100vh;
+            background: rgba(255, 255, 255, 0.9); /* Yarı saydam içerik arka planı */
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section#gallery img {
+            margin: 10px;
+            border: 2px solid #ddd;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section#gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background: #c62828;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Animasyonlar */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX (-50 px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX (0);
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1 style="text-align: center; color: red;">Mığçıoğlu Ocakbaşı</h1>
-    <p style="text-align: center;">Hoş geldiniz! En lezzetli kebap ve ciğer çeşitleri burada!</p>
+    <header>
+        <h1>Mığcıoğlu Ocakbaşı</h1>
+        <p>Lezzetin Adresi</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#intro">Ana Sayfa</a></li>
+            <li><a href="#menu">Menü</a></li>
+            <li><a href="#gallery">Galeri</a></li>
+            <li><a href="#contact">İletişim</a></li>
+        </ul>
+    </nav>
+    <section id="intro">
+        <h2>Hoş Geldiniz</h2>
+        <p>
+            Gaziantep’in kalbinde yer alan Mığcıoğlu Ocakbaşı’na hoş geldiniz. 
+            Lezzetin ve samimiyetin bir araya geldiği restoranımızda, her bir yemek, yılların deneyimiyle harmanlanarak size sunuluyor.
+        </p>
+        <p>
+            Keyifli anılar biriktirebileceğiniz, lezzetin doruklarına ulaşacağınız bu eşsiz deneyimi bizimle paylaşmaya davetlisiniz.
+        </p>
+    </section>
+    <section id="menu">
+        <h2>Menümüz</h2>
+        <p>En taze malzemelerle hazırlanan lezzetler:</p>
+        <ul>
+            <li>Ciğer</li>
+            <li>Kebap</li>
+            <li>Lahmacun</li>
+            <li>Mezeler</li>
+        </ul>
+    </section>
+    <section id="gallery">
+        <h2>Galeri</h2>
+        <img src="ciger.jpg" alt="Ciğer" width="300">
+        <img src="kebap.jpg" alt="Kebap" width="300">
+    </section>
+    <section id="contact">
+        <h2>İletişim</h2>
+        <p><strong>Adres:</strong> Şehitkamil, Gaziantep</p>
+        <p><strong>Telefon:</strong> +90 555 123 4567</p>
+        <p><strong>Sosyal Medya:</strong> <a href="#">Instagram</a> | <a href="#">Facebook</a></p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Mığcıoğlu Ocakbaşı. Tüm hakları saklıdır.</p>
+    </footer>
 </body>
 </html>
