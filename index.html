@@ -15,20 +15,17 @@
             scroll-behavior: smooth;
         }
 
-        /* Dekoratif Arka Plan */
-        body::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('fork-and-knife.svg'), url('plate.svg'); /* SVG dekorlar */
-            background-repeat: no-repeat;
-            background-size: 100px, 150px;
-            background-position: left top, right bottom; /* Çizimleri köşelere yerleştir */
-            opacity: 0.1; /* Şeffaflık */
-            z-index: -1;
+        /* Arka plan görseli sadece intro bölümü için */
+        #intro {
+            position: relative;
+            background: url('kus-resmi.png') no-repeat center center / cover;
+            color: white; /* Yazıyı daha okunaklı yapmak için */
+            padding: 50px 20px;
+            text-align: center;
+            min-height: 100vh;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         header {
@@ -68,56 +65,11 @@
             transform: scale(1.1);
         }
 
-        /* Bölüm Stilleri */
-        section {
-            padding: 50px 20px;
-            text-align: center;
-            min-height: 100vh;
-            background: rgba(255, 255, 255, 0.9); /* Yarı saydam içerik arka planı */
-            margin: 20px auto;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        section#gallery img {
-            margin: 10px;
-            border: 2px solid #ddd;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        section#gallery img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
         footer {
             background: #c62828;
             color: #fff;
             text-align: center;
             padding: 10px 0;
-        }
-
-        /* Animasyonlar */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateX (-50 px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX (0);
-            }
         }
     </style>
 </head>
@@ -160,21 +112,22 @@
         <img src="kebap.jpg" alt="Kebap" width="300">
     </section>
     <section id="contact">
-        <section id="contact">
-    <h2>İletişim</h2>
-    <p><strong>Adres:</strong> Yenişehir, Mersin</p>
-    <p><strong>Telefon:</strong> +90 530 636 3636</p>
-    <p><strong>Sosyal Medya:</strong></p>
-    <a href="https://www.instagram.com/migciogluocakbasi?igsh=MWFpNWgydG8wYzJycg==" target="_blank" 
-        style="
-            display: inline-block; 
-            padding: 10px 20px; 
-            background-color: #E1306C; 
-            color: white; 
-            text-decoration: none; 
-            border-radius: 5px; 
-            font-weight: bold; 
-            transition: background-color 0.3s ease, transform 0.3s ease;">
-        Instagram'da Bizi Takip Edin
-    </a>
-</section>
+        <h2>İletişim</h2>
+        <p><strong>Adres:</strong> Yenişehir, Mersin</p>
+        <p><strong>Telefon:</strong> +90 530 636 3636</p>
+        <p><strong>Sosyal Medya:</strong></p>
+        <a href="https://www.instagram.com/migciogluocakbasi?igsh=MWFpNWgydG8wYzJycg==" target="_blank" 
+            style="
+                display: inline-block; 
+                padding: 10px 20px; 
+                background-color: #E1306C; 
+                color: white; 
+                text-decoration: none; 
+                border-radius: 5px; 
+                font-weight: bold; 
+                transition: background-color 0.3s ease, transform 0.3s ease;">
+            Instagram'da Bizi Takip Edin
+        </a>
+    </section>
+</body>
+</html>
