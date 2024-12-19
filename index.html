@@ -5,30 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mığcıoğlu Ocakbaşı</title>
     <style>
-        /* Genel Stiller */
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f8f3ec; /* Hafif krem rengi arka plan */
+            background-color: #f8f3ec;
             scroll-behavior: smooth;
-        }
-
-        /* Geçiş Animasyonu */
-        * {
-            transition: all 0.3s ease-in-out;
         }
 
         header {
             background: #c62828;
-            color: #fff;
+            color: white;
             padding: 1rem 0;
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 10;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeInDown 1s ease;
         }
 
         nav ul {
@@ -57,73 +52,94 @@
             transform: scale(1.1);
         }
 
-        /* Bölüm Stilleri */
         section {
             padding: 50px 20px;
             text-align: center;
             min-height: 100vh;
-            background: rgba(255, 255, 255, 0.9); /* Yarı saydam içerik arka planı */
+            background: rgba(255, 255, 255, 0.9);
             margin: 20px auto;
             border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            transform: translateY(50px);
-            animation: fadeInUp 1s ease forwards;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.5s ease;
         }
 
-        /* Animasyon */
-        @keyframes fadeInUp {
-            0% {
+        #intro {
+            background: url('kus-resmi.png') no-repeat center center / cover;
+            color: white;
+            padding: 100px 20px;
+            position: relative;
+        }
+
+        #intro h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+        #intro p {
+            font-size: 1.2rem;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 15px;
+            border-radius: 10px;
+            display: inline-block;
+            line-height: 1.8;
+            margin-top: 20px;
+        }
+
+        #gallery img {
+            margin: 10px;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background: #c62828;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        button, a {
+            transition: all 0.3s ease;
+        }
+
+        button:hover, a:hover {
+            transform: translateY(-5px);
+            background-color: #d32f2f !important;
+            color: white !important;
+        }
+
+        @keyframes fadeIn {
+            from {
                 opacity: 0;
-                transform: translateY(50px);
+                transform: translateY(20px);
             }
-            100% {
+            to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
 
-        /* Hoş Geldiniz Kutusu */
-        #intro {
-            position: relative;
-            background-image: url('A_visually_stunning_and_elegant_illustration_of_a_.png');
-            background-size: cover;
-            background-position: center;
-            color: white;
-        }
-
-        #intro .content-box {
-            position: relative;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 20px;
-            margin: auto;
-            max-width: 600px;
-            border-radius: 10px;
-            color: white;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-            opacity: 0;
-            transform: scale(0.8);
-            animation: zoomIn 1s ease forwards 0.5s;
-        }
-
-        @keyframes zoomIn {
-            0% {
+        @keyframes fadeInDown {
+            from {
                 opacity: 0;
-                transform: scale(0.8);
+                transform: translateY(-20px);
             }
-            100% {
+            to {
                 opacity: 1;
-                transform: scale(1);
+                transform: translateY(0);
             }
         }
-
-        footer {
-            background: #c62828;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-        }
-
     </style>
 </head>
 <body>
@@ -140,16 +156,11 @@
         </ul>
     </nav>
     <section id="intro">
-        <div class="content-box">
-            <h2>Hoş Geldiniz</h2>
-            <p>
-                Mersin'in kalbinde yer alan Mığcıoğlu Ocakbaşı’na hoş geldiniz. 
-                Lezzetin ve samimiyetin bir araya geldiği restoranımızda, her bir yemek, yılların deneyimiyle harmanlanarak size sunuluyor.
-            </p>
-            <p>
-                Keyifli anılar biriktirebileceğiniz, lezzetin doruklarına ulaşacağınız bu eşsiz deneyimi bizimle paylaşmaya davetlisiniz.
-            </p>
-        </div>
+        <h2>Hoş Geldiniz</h2>
+        <p>
+            Mersin'in kalbinde yer alan Mığcıoğlu Ocakbaşı’na hoş geldiniz. 
+            Lezzetin ve samimiyetin bir araya geldiği restoranımızda, her bir yemek, yılların deneyimiyle harmanlanarak size sunuluyor.
+        </p>
     </section>
     <section id="menu">
         <h2>Menümüz</h2>
@@ -161,8 +172,30 @@
             <li>Mezeler</li>
         </ul>
     </section>
+    <section id="gallery">
+        <h2>Galeri</h2>
+        <img src="kebap.jpg" alt="Kebap" width="300">
+        <img src="ciger.jpg" alt="Ciğer" width="300">
+    </section>
+    <section id="contact">
+        <h2>İletişim</h2>
+        <p><strong>Adres:</strong> Yenişehir, Mersin</p>
+        <p><strong>Telefon:</strong> +90 530 636 3636</p>
+        <a href="https://www.instagram.com/migciogluocakbasi" 
+            style="
+                display: inline-block; 
+                padding: 10px 20px; 
+                background-color: #E1306C; 
+                color: white; 
+                text-decoration: none; 
+                border-radius: 5px; 
+                font-weight: bold; 
+                transition: background-color 0.3s ease, transform 0.3s ease;">
+            Instagram'da Bizi Takip Edin
+        </a>
+    </section>
     <footer>
-        <p>© 2024 Mığcıoğlu Ocakbaşı</p>
+        <p>&copy; 2024 Mığcıoğlu Ocakbaşı</p>
     </footer>
 </body>
 </html>
